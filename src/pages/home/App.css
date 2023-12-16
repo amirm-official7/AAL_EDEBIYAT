@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content {
+  /* padding: 20px; */
+}
+
+.sloganul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+
+.sloganli {
+  margin: 30px 10px 10px 0;
+  cursor: pointer;
+  width: calc(33.33% - 10px); /* Three items per row with some margin */
+}
+
+
+/* Gallery.css */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.gallery-item {
+  width: calc(33.33% - 10px); /* Adjust the width and margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  cursor: pointer;
+}
+
+
+@media (max-width: 500px) { 
+  .gallery-item {
+    width: calc(50% - 10px); /* Adjust the width and margin as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  } 
+  
+  .sloganli {
+    margin: 30px 10px 10px 0;
+    width: calc(50% - 10px); /* Three items per row with some margin */
+  }
+}
+
+
+/* css for overlay of images */
+
+.overlay-image-container { 
+  width: 80%;
+  height: 80%;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+  /* border-bottom: 1px solid #bdbdbd */
+}
+
+
+.overlay-image {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
