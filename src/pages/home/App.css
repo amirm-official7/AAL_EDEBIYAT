@@ -11,7 +11,7 @@
 }
 
 .header {
-  background-color: black;
+  background-color: #333;
   color: white;
   padding: 10px;
 }
@@ -19,10 +19,12 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .content {
-  /* padding: 20px; */
+  /* margin-top: 100px */
+  padding: 20px;
 }
 
 .sloganul {
@@ -91,6 +93,8 @@
   pointer-events: none;
   user-select: none;
   /* border-bottom: 1px solid #bdbdbd */
+
+
 }
 
 
@@ -98,4 +102,135 @@
   width: auto;
   height: 100%;
   margin: auto;
+  border-radius: 10px;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.sloganoverlaycontainer::-webkit-scrollbar {
+  width: 21px; 
+  margin-right: -5000px;
+}
+
+.sloganoverlaycontainer::-webkit-scrollbar-thumb {
+  background-color: #04C2; /* Color of the thumb */
+  border-radius: 0 25px 25px 0; /* Border radius of the thumb */
+}
+
+
+
+.sloganoverlaycontainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+  border-radius: 0 25px 25px 0; /* Border radius of the track */
+}
+
+/* For Firefox */
+/* Note: Firefox doesn't currently support border-radius on the scrollbar thumb and track */
+/* The following styles will only work on WebKit browsers */
+* {
+  scrollbar-color: #04C2 #f1f1f1;
+  scrollbar-width: normal;
+}
+
+.spanTDK {
+  color: blue; /* Set your desired text color */
+  text-decoration: underline; /* Add underline to simulate a link */
+  cursor: pointer;
+}
+
+.spanTDK:hover {
+  color: darkblue; /* Set the color you want on hover */
+}
+
+.TDKOVERLAYWORD {
+  box-sizing: border-box;
+  font-size: 40px;
+  font-weight: bolder;
+  color: blue;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: CENTER; 
+}
+
+.TDKOVERLAYTELAFFUZ {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: orange;
+  line-height: 1.4;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.TDKOVERLAYWORDMEANING {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: black;
+  line-height: 1.4;
+}
+
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.loading-dot {
+  width: 30px;
+  height: 30px;
+  background-color: #f90; /* Orange color */
+  border-radius: 50%;
+  margin: 0 10px;
+  opacity: 0;
+  animation: loading-animation 1.5s infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.5s;
+  background-color: #3498db; /* Blue color */
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 1s;
+  background-color: #f90; /* Orange color */
+}
+
+@keyframes loading-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+}
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.github-logo {
+  width: 20px; /* Adjust the width of the GitHub logo */
+  height: auto;
+  margin-right: 5px;
+  vertical-align: middle;
 }
