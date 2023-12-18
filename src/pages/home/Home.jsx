@@ -2,11 +2,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import JSONDATA from '../../DATA.json';
 
+import { Document, Page, pdfjs } from 'react-pdf';
+
 import './App.css';
 
 import axios from 'axios'
 
 import GithubLogo from '../../github_logo.png'
+
 
 
 
@@ -37,7 +40,7 @@ const App = ({ setSteps, steps }) => {
   return (
     <div className="app">
       <header className="header">
-        <div className="logo">DILIMIZIN ZENGINLIKLERI</div>
+        <div title="Abidinpaşa Anadolu Lisesi dilimizin zenginlikleri projesi" className="logo">DILIMIZIN ZENGINLIKLERI</div>
       </header>
       <main className="content">
         {data.map((d, index) => {
@@ -45,6 +48,13 @@ const App = ({ setSteps, steps }) => {
           return (
             <div key={index}>
               <h2 className='sticky-title' style={{margin:"0", width: "100%", background: "white", position: "sticky", top: "0px", textAlign:"center", zIndex: "1", color: "orange" }}><u>{d.TITLE}</u></h2>
+
+              {/* <div className="pdf-container">
+                <object className="pdf-object" data="https://ahgal.meb.k12.tr/meb_iys_dosyalar/08/03/125513/dosyalar/2018_02/07085232_PYTHON-II.DYNEM.pdf" type="application/pdf">
+                  <p>Alternative text - include a link <a href="https://ahgal.meb.k12.tr/meb_iys_dosyalar/08/03/125513/dosyalar/2018_02/07085232_PYTHON-II.DYNEM.pdf">to the PDF!</a></p>
+                </object>
+              </div> */}
+              {/* <PdfViewer pdfFile={"/sozluk.pdf"} startingPage={1}/> */}
 
               <div>
                 {d.DATA.map((i, index)=>{
@@ -70,7 +80,9 @@ const App = ({ setSteps, steps }) => {
                           <ul  className="sloganul">
                             {i.DATA.map((slogan, index)=> {
                               return ( 
-                                <li className="sloganli" onClick={()=>SetDisplaySlogan({display: true, data: slogan})} key={index}>{slogan.DATA} <span className="spanTDK">{"[anlamı]"}</span></li>    
+                                <li className="sloganli" onClick={()=>SetDisplaySlogan({display: true, data: slogan})} key={index}>{slogan.DATA} 
+                                  <span className="spanTDK">{"[anlamı]"}</span>
+                                </li>    
 
                               )
                             })}
@@ -124,6 +136,10 @@ const App = ({ setSteps, steps }) => {
                               )
                             })}
                           </ul>
+                        </div>
+                        <div style={{textAlign: "center"}}>
+                          <a className="orange-button" href="/sozluk.pdf" target="_blank">Devamını Oku</a>
+
                         </div>
                       </div>
 
@@ -270,7 +286,15 @@ const DisplaySloganOverlay = ({ displaySlogan, SetDisplaySlogan }) => {
   
           <p style={{color: "black", marginLeft: "15px", marginTop: "10px"}}><b>{displaySlogan.data.MEANINGOFTHESLOGAN}</b></p>
 
-        </div>: null}
+        </div>
+        : 
+        <div>
+          <div style={{fontSize: "25px", marginTop: "25px", color: "orange"}}><b>Anlam:</b></div>
+
+          <p style={{color: "black", marginLeft: "15px", marginTop: "10px", color: "red"}}><b>Anlam Bulunamadi</b></p>
+
+        </div>
+        }
         
 
         {(displaySlogan.data.EXPLONATION.length > 0)? 
@@ -281,6 +305,15 @@ const DisplaySloganOverlay = ({ displaySlogan, SetDisplaySlogan }) => {
 
           </div>     
         : null}
+
+        <div style={{position: "absolute", bottom: "10px", right: "10px", fontSize: "25px"}}>
+          <b>
+            {displaySlogan.data.CREATOR} - {displaySlogan.data.CLASSOFCREATOR}
+
+
+          </b>
+
+        </div>
       </div>
     </div>
   );
@@ -409,3 +442,47 @@ const DisplayDictionaryOverlay = ({ DisplayDictionary, SetDisplayDictionary }) =
     </div>
   );
 };
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+
+
+// const PdfViewer = ({ pdfFile, startingPage }) => {
+//   const [numPages, setNumPages] = useState(null);
+//   const [pageNumber, setPageNumber] = useState(startingPage);
+
+//   const onDocumentLoadSuccess = ({ numPages }) => {
+//     setNumPages(numPages);
+//   };
+
+//   const goToPreviousPage = () => {
+//     setPageNumber((prevPageNumber) => Math.max(prevPageNumber - 1, 1));
+//   };
+
+//   const goToNextPage = () => {
+//     setPageNumber((prevPageNumber) => Math.min(prevPageNumber + 1, numPages));
+//   };
+
+//   return (
+//     <div>
+//       <nav>
+//         <button onClick={() => goToPreviousPage()} disabled={pageNumber <= 1}>
+//           Previous
+//         </button>
+//         <button onClick={() => goToNextPage()} disabled={pageNumber >= numPages}>
+//           Next
+//         </button>
+//       </nav>
+
+//       <div>
+//         <Document file={pdfFile}>
+//           <Page pageNumber={pageNumber} />
+//         </Document>
+//       </div>
+
+//       <p>
+//         Page {pageNumber} of {numPages}
+//       </p>
+//     </div>
+//   );
+// };
