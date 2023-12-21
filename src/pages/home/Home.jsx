@@ -1,4 +1,7 @@
 // App.js
+
+// https://editorhtmlonline.com/
+
 import React, { useRef, useState, useEffect } from 'react';
 import JSONDATA from '../../DATA.json';
 
@@ -47,7 +50,8 @@ const App = ({ setSteps, steps }) => {
           console.log(d);
           return (
             <div key={index}>
-              <h2 className='sticky-title' style={{margin:"0", width: "100%", background: "white", position: "sticky", top: "0px", textAlign:"center", zIndex: "1", color: "orange" }}><u>{d.TITLE}</u></h2>
+              <h2 className='sticky-title' style={{margin:"0", width: "100%", background: "white", position: "sticky", top: "0px", textAlign:"center", zIndex: "1", color: "red" }}><u>{d.TITLE}</u></h2>
+
 
               {/* <div className="pdf-container">
                 <object className="pdf-object" data="https://ahgal.meb.k12.tr/meb_iys_dosyalar/08/03/125513/dosyalar/2018_02/07085232_PYTHON-II.DYNEM.pdf" type="application/pdf">
@@ -61,11 +65,17 @@ const App = ({ setSteps, steps }) => {
                   if(i.TYPE === "TEXT"){
                     return (
                       <div className='addheight'>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "blue" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "#94231b" }}>{i.SUBTITLE}</h3>
                          
+                        <div className='safahalImgContainer'>
+                          <img className='safahalImg' src="/1.jpeg" alt="" />
+                        </div>
                         <div style={{margin: "20px"}}>
                           {/* <div>{i.DATA}</div> */}
                           <div dangerouslySetInnerHTML={{ __html: i.DATA }}/>
+                        </div>
+                        <div className='safahalImgContainer'>
+                          <img className='safahalImg' src="/2.jpeg" alt="" />
                         </div>
                       </div>
 
@@ -74,7 +84,7 @@ const App = ({ setSteps, steps }) => {
                   else if (i.TYPE === "SLOGANS"){
                     return (
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "blue" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
                         
                         <div style={{margin: "20px"}}>
                           <ul  className="sloganul">
@@ -96,7 +106,7 @@ const App = ({ setSteps, steps }) => {
                     return (
                       
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "blue" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
                         
                         <div className="gallery">
                           {i.DATA.map((img, index)=> {
@@ -117,7 +127,7 @@ const App = ({ setSteps, steps }) => {
                   else if (i.TYPE === "DICTIONARY"){
                     return (
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "blue" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
                         
                         <div style={{margin: "20px"}}>
                           <ul  className="sloganul">
