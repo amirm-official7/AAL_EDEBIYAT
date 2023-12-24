@@ -89,9 +89,20 @@ const App = ({ setSteps, steps }) => {
                         <div style={{margin: "20px"}}>
                           <ul  className="sloganul">
                             {i.DATA.map((slogan, index)=> {
+                              
                               return ( 
-                                <li className="sloganli" onClick={()=>SetDisplaySlogan({display: true, data: slogan})} key={index}>{slogan.DATA} 
-                                  <span className="spanTDK">{"[anlamı]"}</span>
+
+                                <li className="sloganli" onClick={()=>SetDisplaySlogan({display: true, data: slogan})} key={index}>
+                                  <span style={{position: "relative"}}>
+                                    {(index == 0)? <span title='Bu slogan yarışmada birincilik ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#1</span>: null}
+                                    {(index == 1)? <span title='Bu slogan yarışmada ikincilik ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#2</span>: null}
+                                    {(index == 2)? <span title='Bu slogan yarışmada üçüncülük  ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#3</span>: null}
+                                    
+                                    
+                                    {slogan.DATA} 
+                                    <span className="spanTDK">{"[anlamı]"}</span>
+
+                                  </span>
                                 </li>    
 
                               )
@@ -149,7 +160,9 @@ const App = ({ setSteps, steps }) => {
                         </div>
                         <div style={{textAlign: "center"}}>
                           <a className="orange-button" href="/sozluk.pdf" target="_blank">Devamını Oku</a>
-
+                        </div>
+                        <div style={{textAlign: "center", marginTop: "20px"}}>
+                          <a className="orange-button" href="https://drive.google.com/file/d/1ki1MtdIjeEWHH2MzTRY_0ucHqeQIz9Ib/view?usp=sharing" target="_blank">Devamını Oku</a>
                         </div>
                       </div>
 

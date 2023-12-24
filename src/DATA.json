@@ -16,46 +16,19 @@
                 "DATA": 
                 [
                     {
-                        "CREATOR": "Arzu Taşkıran", 
-                        "CLASSOFCREATOR": "10/C", 
+                        "CREATOR": "Şeyma Aydoğan", 
+                        "CLASSOFCREATOR": "12/C", 
                         "TEACHEROFCREATOR": "", 
-                        "DATA": "vatan uğuruna gümrirah olan hayaller atıde bir ulusun caviden olarak sahiplenmesiyle parlayacak kusal masnüatadır!",
-                        "MEANINGOFTHESLOGAN": "vatan uğuruna yolunu kaybetmiş hayaller gelecekte bir ulusun ebediolarak sahiplenmesiyle parlayacak kutsal sanat eseridir.", 
+                        "DATA": "Ahlâf râmihe benzer.  Dil-hâh’, müjdeler.",
+                        "MEANINGOFTHESLOGAN": "Gelecek nesiller parlak bir yıldıza benzer. Gönlün istediğini müjdeler.", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
                     },
                     {
-                        "CREATOR": "Beyza Mertsoy", 
-                        "CLASSOFCREATOR": "11/E", 
-                        "TEACHEROFCREATOR": "", 
-                        "DATA": "Sen görmeyen muebbed bir bayat ummuş bu millete beşörat oldun ey istiklal!",
-                        "MEANINGOFTHESLOGAN": "", 
-                        "TYPE": "SLOGAN", 
-                        "EXPLONATION": ""
-                    },
-                    {
-                        "CREATOR": "Beyza Mertsoy", 
-                        "CLASSOFCREATOR": "11/E", 
-                        "TEACHEROFCREATOR": "", 
-                        "DATA": "Ümidini yitirdi bu millet ferda-i ferah olsun ufuklarda ey harriyet ey istiklal!",
-                        "MEANINGOFTHESLOGAN": "", 
-                        "TYPE": "SLOGAN", 
-                        "EXPLONATION": ""
-                    },          
-                    {
                         "CREATOR": "Hanzade Abdusodikova", 
                         "CLASSOFCREATOR": "11/B", 
                         "TEACHEROFCREATOR": "", 
-                        "DATA": "Oğerimde kanayan bir yara, haykiriyor istiklal diye.",
-                        "MEANINGOFTHESLOGAN": "", 
-                        "TYPE": "SLOGAN", 
-                        "EXPLONATION": ""
-                    },    
-                    {
-                        "CREATOR": "Hanzade Abdusodikova", 
-                        "CLASSOFCREATOR": "11/B", 
-                        "TEACHEROFCREATOR": "", 
-                        "DATA": "Cehalettir hasın-ı hakiki, evvela onu öldürmeli.",
+                        "DATA": "Cehalettir hâsın-ı hakiki, evvelâ onu öldürmeli.",
                         "MEANINGOFTHESLOGAN": "", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
@@ -64,35 +37,152 @@
                         "CREATOR": "Aleyna Köpru", 
                         "CLASSOFCREATOR": "11/E", 
                         "TEACHEROFCREATOR": "", 
-                        "DATA": "Niyetin ermerse bir maksada, bırak istiranati.",
+                        "DATA": "Niyetin ermerse bir maksada, bırak istiranati kenara.",
                         "MEANINGOFTHESLOGAN": "", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
                     }, 
                     {
-                        "CREATOR": "Ela Yıldırım", 
+                        "CREATOR": "Arzu Taşkıran", 
+                        "CLASSOFCREATOR": "10/C", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Vatan uğuruna gümrâh olan hayaller atîde bir ulusun caviden olarak sahiplenmesiyle parlayacak kutsal masnûatadır!",
+                        "MEANINGOFTHESLOGAN": "Vatan uğuruna yolunu kaybetmiş hayaller gelecekte bir ulusun ebedi olarak sahiplenmesiyle parlayacak kutsal sanat eseridir.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Beyza Mertsoy", 
+                        "CLASSOFCREATOR": "11/E", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Sen gün görmeyen muebbed bir bayat ummuş bu millete beşârat oldun ey istiklal!",
+                        "MEANINGOFTHESLOGAN": "", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Beyza Mertsoy", 
+                        "CLASSOFCREATOR": "11/E", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Ümidini yitirdi bu millet ferda-i ferah olsun ufuklarda ey hürriyet ey istiklal!",
+                        "MEANINGOFTHESLOGAN": "", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },          
+                    {
+                        "CREATOR": "Hanzade Abdusodikova", 
+                        "CLASSOFCREATOR": "11/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "çiğerimde kanayan bir yara, haykırıyor istiklal diye.",
+                        "MEANINGOFTHESLOGAN": "", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },    
+                    {
+                        "CREATOR": "Arda Akkuş", 
                         "CLASSOFCREATOR": "11/C", 
                         "TEACHEROFCREATOR": "", 
-                        "DATA": "Berf-ı berın cıböl, nar-ı amik cehimi avalara nazar eder.",
-                        "MEANINGOFTHESLOGAN": "Kibirli, kendini herkesden yüksekte görenlerin düşeceğı cehennemdir.", 
+                        "DATA": "Berf-î berîn cîböl, nar-ı amik cehimi avalara nazar eder.",
+                        "MEANINGOFTHESLOGAN": "Kibirli, kendini herkesden yüksekte görenlerin düşeceğı yer cehennemdir.", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
                     }, 
                     {
-                        "CREATOR": "Ela Yıldırım", 
+                        "CREATOR": "Kaan Özdemir", 
                         "CLASSOFCREATOR": "11/C", 
                         "TEACHEROFCREATOR": "", 
                         "DATA": "Akim beyinler abes akualler üretir.",
-                        "MEANINGOFTHESLOGAN": "kısır beyinler boş laflar üretir.", 
+                        "MEANINGOFTHESLOGAN": "Kısır beyinler boş laflar üretir.", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
                     }, 
                     {
-                        "CREATOR": "Ela Yıldırım", 
+                        "CREATOR": "Kaan Özdemir", 
                         "CLASSOFCREATOR": "11/C", 
                         "TEACHEROFCREATOR": "", 
                         "DATA": "Abes akualler akim beyınler üretır.",
-                        "MEANINGOFTHESLOGAN": "boş laflar kısır beyınler üretir.", 
+                        "MEANINGOFTHESLOGAN": "Boş laflar kısır beyınler üretir.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Şeyma Aydoğan", 
+                        "CLASSOFCREATOR": "12/C", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Çehreye şem vurmuş âsümandân, berhudâr olacaksın, bekle. Dil ebkem, dünû’, istimdattan geliyor sesler, dinle.",
+                        "MEANINGOFTHESLOGAN": "Çehreye ışık vurmuş gökyüzünden, mutlu alacaksın, bekle. Gönül dilsiz, yardım dileyen gözyaşlarından geliyor sesler, dinle.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Şeyma Aydoğan", 
+                        "CLASSOFCREATOR": "12/C", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Kabuğundan yeni çıktı azade bir dürdâne. Bitmedi, bitmeyecek bu haile. ",
+                        "MEANINGOFTHESLOGAN": "Kabuğundan yeni çıktı hür bir inci. Bitmedi, bitmeyecek bu trajedi. ", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Şeyma Aydoğan", 
+                        "CLASSOFCREATOR": "12/C", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Nûr-i şebâb sönmeyecek. Mevhûm olma, latiftir gelecek.",
+                        "MEANINGOFTHESLOGAN": "Gençlik ışığı sönmeyecek. kuşkulu olma, güzeldir gelecek.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Sûkut ecsâdındır, senin ne haddine! Senin vazifen ziym–ı isârdır.",
+                        "MEANINGOFTHESLOGAN": "Sessizlik cesetlerindir, senin ne haddine! Senin görevin ışığını saçmaktır. ", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Ecsâdların başarısı kimin umrunda dur, yaşayanların cahilliği en büyük acıdır. ",
+                        "MEANINGOFTHESLOGAN": "Cesetlerin (ölülerin) başarısı kimin umrunda olur, yaşayanların cahilliği en büyük acıdır.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Abes efkâra aldanma, Felâh-a kavuşacak ezvakların olsun. ",
+                        "MEANINGOFTHESLOGAN": "Boş fikirlere aldanma, kurtuluşa kavuşacak zevklerin olsun. ", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Başarı nâr-ı seni bitâb düşürecektir. Lâkin ercam-ı ıyd-ın olacaktır. ",
+                        "MEANINGOFTHESLOGAN": "Başarı ateşi seni güçsüz düşürecektir. Ancak sonu bayramın olacaktır. ", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Erhâh cife badiyesinde batarken ihtirâm felâh-ın olacaktır.",
+                        "MEANINGOFTHESLOGAN": "Ruhlar lêş çölünde batarken saygi kurtuluşun bayramıdır.", 
+                        "TYPE": "SLOGAN", 
+                        "EXPLONATION": ""
+                    },
+                    {
+                        "CREATOR": "Ayşe Feyza Keskin", 
+                        "CLASSOFCREATOR": "9/B", 
+                        "TEACHEROFCREATOR": "", 
+                        "DATA": "Ziyâ-n bulut olsun, sen ziyâ-n gibi ol. ",
+                        "MEANINGOFTHESLOGAN": "Işığın bulut olsun, sen ışığın gibi ol. ", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""
                     },
@@ -106,10 +196,10 @@
                         "EXPLONATION": ""
                     },
                     {
-                        "CREATOR": "Nuncem Özlen", 
+                        "CREATOR": "Nurcan Özten", 
                         "CLASSOFCREATOR": "Türk Dili ve Edeiyati Öğretmen", 
                         "TEACHEROFCREATOR": "", 
-                        "DATA": "Maniden gelen kutlu medenıyetımın asım'ın nesli ile âtîye ışık olacaktır.",
+                        "DATA": "Maniden gelen kutlu medenıyetımın Asım'ın nesli ile âtîye ışık olacaktır.",
                         "MEANINGOFTHESLOGAN": "Geçmilten gelen kutlu medenıyetımız Asımin nesli ile geleceğe ışık olacaktır.", 
                         "TYPE": "SLOGAN", 
                         "EXPLONATION": ""

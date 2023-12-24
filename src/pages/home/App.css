@@ -39,6 +39,7 @@
 .sloganli {
   margin: 30px 10px 10px 0;
   cursor: pointer;
+  
   width: calc(33.33% - 10px); /* Three items per row with some margin */
 }
 
