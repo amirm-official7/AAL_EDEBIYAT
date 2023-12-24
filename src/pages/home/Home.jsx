@@ -298,21 +298,21 @@ const DisplaySloganOverlay = ({ displaySlogan, SetDisplaySlogan }) => {
         </span>
       </div>
       <div className="sloganoverlaycontainer" style={{height: "90%", width: "75%", background: "white", color: "black", padding: '15px', overflowY: "scroll", borderRadius:"25px", cursor: "default"}}>
-        <div style={{fontSize: "25px", color: "blue"}}><b>Slogan:</b></div>
+        <div style={{fontSize: "25px", color: "red"}}><b>Slogan:</b></div>
 
         <p style={{color: "black", marginLeft: "15px", marginTop: "10px"}}><b>{displaySlogan.data.DATA}</b></p>
         
 
         {(displaySlogan.data.MEANINGOFTHESLOGAN.length > 0)?
         <div>
-          <div style={{fontSize: "25px", marginTop: "25px", color: "orange"}}><b>Anlam:</b></div>
+          <div style={{fontSize: "25px", marginTop: "25px", color: "rgb(148, 35, 27)"}}><b>Anlam:</b></div>
   
           <p style={{color: "black", marginLeft: "15px", marginTop: "10px"}}><b>{displaySlogan.data.MEANINGOFTHESLOGAN}</b></p>
 
         </div>
         : 
         <div>
-          <div style={{fontSize: "25px", marginTop: "25px", color: "orange"}}><b>Anlam:</b></div>
+          <div style={{fontSize: "25px", marginTop: "25px", color: "rgb(148, 35, 27)"}}><b>Anlam:</b></div>
 
           <p style={{color: "black", marginLeft: "15px", marginTop: "10px", color: "red"}}><b>Anlam Bulunamadi</b></p>
 
