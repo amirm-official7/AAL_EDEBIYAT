@@ -13,6 +13,9 @@ import axios from 'axios'
 
 import GithubLogo from '../../github_logo.png'
 
+import { useNavigate, useLocation } from 'react-router-dom';
+
+
 
 
 
@@ -34,12 +37,36 @@ const App = ({ setSteps, steps }) => {
   ]);
 
   useEffect(()=>{
+    navigate('/');
     setData(JSONDATA)
   },[])
 
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  const handleChangeURL = () => {
+    // Use push or replace depending on your use case
+    
+    navigate('/'+Math.floor((Math.random() * 100000000000000) + 1));
+
+    // or
+    // history.replace('/new-url');
+  };
 
   
+  useEffect(() => {
+    if (location.pathname === '/') {
+      SetDisplay({display: false, url: '', explanation: ""})
+      SetDisplaySlogan({display: false, data: {}})
+      SetDisplayDictionary({display: false, word: ""})
+
+    }
+     // enter your route here
+  }, [location]);
+
+
   return (
     <div className="app">
       <header className="header">
@@ -50,7 +77,7 @@ const App = ({ setSteps, steps }) => {
           console.log(d);
           return (
             <div key={index}>
-              <h2 className='sticky-title' style={{margin:"0", width: "100%", background: "white", position: "sticky", top: "0px", textAlign:"center", zIndex: "1", color: "red" }}><u>{d.TITLE}</u></h2>
+              <h2 className='sticky-title' style={{margin:"0", width: "100%", background: "white", position: "sticky", top: "0px", textAlign:"center", zIndex: "9999", color: "red" }}><u>{d.TITLE}</u></h2>
 
 
               {/* <div className="pdf-container">
@@ -65,7 +92,7 @@ const App = ({ setSteps, steps }) => {
                   if(i.TYPE === "TEXT"){
                     return (
                       <div className='addheight'>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "#94231b" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", zIndex: "9998", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "#94231b" }}>{i.SUBTITLE}</h3>
                          
                         <div className='safahalImgContainer'>
                           <img className='safahalImg' src="/1.jpeg" alt="" />
@@ -84,7 +111,8 @@ const App = ({ setSteps, steps }) => {
                   else if (i.TYPE === "SLOGANS"){
                     return (
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white" ,zIndex: "9998" , position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
+                        
                         
                         <div style={{margin: "20px"}}>
                           <ul  className="sloganul">
@@ -92,8 +120,11 @@ const App = ({ setSteps, steps }) => {
                               
                               return ( 
 
-                                <li className="sloganli" onClick={()=>SetDisplaySlogan({display: true, data: slogan})} key={index}>
-                                  <span style={{position: "relative"}}>
+                                <li className="sloganli" onClick={()=>{
+                                  handleChangeURL()
+                                  SetDisplaySlogan({display: true, data: slogan})
+                                  }} key={index}>
+                                  <span style={{position: "relative",}}>
                                     {(index == 0)? <span title='Bu slogan yarışmada birincilik ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#1</span>: null}
                                     {(index == 1)? <span title='Bu slogan yarışmada ikincilik ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#2</span>: null}
                                     {(index == 2)? <span title='Bu slogan yarışmada üçüncülük  ödülünü kazanmıştır' style={{position: "absolute", top: "-20px", left: "-10px", color: "#00E0D4", fontSize: "20px"}}>#3</span>: null}
@@ -117,14 +148,17 @@ const App = ({ setSteps, steps }) => {
                     return (
                       
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white",zIndex: "9998", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
                         
                         <div className="gallery">
                           {i.DATA.map((img, index)=> {
                             return ( 
 
                               <div key={index} className="gallery-item">
-                                <img onClick={()=> SetDisplay({display: true, url: img.DATA, explanation: img.EXPLONATION})}  src={img.DATA} alt={`Picture ${index + 1}`} className="gallery-image" />
+                                <img onClick={()=> {
+                                  handleChangeURL()
+                                  SetDisplay({display: true, url: img.DATA, explanation: img.EXPLONATION})
+                                }}  src={img.DATA} alt={`Picture ${index + 1}`} className="gallery-image" />
                               </div>        
 
                             )
@@ -138,7 +172,7 @@ const App = ({ setSteps, steps }) => {
                   else if (i.TYPE === "DICTIONARY"){
                     return (
                       <div>
-                        <h3 style={{background: "white", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
+                        <h3 style={{background: "white", zIndex: "9998", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", color: "#94231b" }}>{i.SUBTITLE}</h3>
                         
                         <div style={{margin: "20px"}}>
                           <ul  className="sloganul">
@@ -148,7 +182,10 @@ const App = ({ setSteps, steps }) => {
                                   
                                   {word.DATA} = {word.MEANING}
                                   <span> </span>
-                                  <span onClick={()=>SetDisplayDictionary({display: true, word: word.DATA})} className="spanTDK" style={{cursor: "pointer"}}> 
+                                  <span onClick={()=>{
+                                    handleChangeURL()
+                                    SetDisplayDictionary({display: true, word: word.DATA})
+                                  }} className="spanTDK" style={{cursor: "pointer"}}> 
                                       {"[TDK]"}
                                   </span>
                                   
@@ -159,10 +196,10 @@ const App = ({ setSteps, steps }) => {
                           </ul>
                         </div>
                         <div style={{textAlign: "center"}}>
-                          <a className="orange-button" href="/sozluk.pdf" target="_blank">Devamını Oku</a>
+                          <a className="orange-button" href="/sozluk.pdf" target="_blank">Devamını Oku {"(pdf)"}</a>
                         </div>
                         <div style={{textAlign: "center", marginTop: "20px"}}>
-                          <a className="orange-button" href="https://drive.google.com/file/d/1ki1MtdIjeEWHH2MzTRY_0ucHqeQIz9Ib/view?usp=sharing" target="_blank">Devamını Oku</a>
+                          <a className="orange-button" href="https://drive.google.com/file/d/1ki1MtdIjeEWHH2MzTRY_0ucHqeQIz9Ib/view?usp=sharing" target="_blank">Devamını Oku {"(Google Drive)"}</a>
                         </div>
                       </div>
 
@@ -208,7 +245,13 @@ export default App;
 const DisplayOverlay = ({ display, setDisplay }) => {
   const [IsHorizontal, setIsHorizontal] = useState(true);
 
+  
+  const navigate = useNavigate();
+
+  
+  
   const handleClose = () => {
+    navigate('/');
     setDisplay({display: false, url: '', explanation: ""});
   };
 
@@ -256,7 +299,13 @@ const DisplayOverlay = ({ display, setDisplay }) => {
 
 
 const DisplaySloganOverlay = ({ displaySlogan, SetDisplaySlogan }) => {
+
+  const navigate = useNavigate();
+
+  
+
   const handleClose = () => {
+    navigate('/');
     SetDisplaySlogan({display: false, data: {}});
   };
 
@@ -350,7 +399,13 @@ const DisplayDictionaryOverlay = ({ DisplayDictionary, SetDisplayDictionary }) =
   const [IsLoading, setIsLoading] = useState(true)
 
   
+  const navigate = useNavigate();
+
+  
+  
+  
   const handleClose = () => {
+    navigate('/');
     setIsLoading(true)
     setWordData({})
     SetDisplayDictionary({display: false, word: ""})  
