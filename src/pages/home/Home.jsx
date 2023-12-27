@@ -2,8 +2,22 @@
 
 // https://editorhtmlonline.com/
 
+import "froala-editor/js/froala_editor.pkgd.min.js";
+import "froala-editor/js/plugins.pkgd.min.js";
+import "froala-editor/js/third_party/embedly.min.js";
+// import "froala-editor/js/plugins/fullscreen.min.js"
+
+// Require Editor CSS files.
+import "froala-editor/css/froala_style.min.css";
+import "froala-editor/css/froala_editor.pkgd.min.css";
+import "froala-editor/css/third_party/embedly.min.css";
+
+import "tributejs/dist/tribute.css";
+
+
 import React, { useRef, useState, useEffect } from 'react';
 import JSONDATA from '../../DATA.json';
+import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
 
 import { Document, Page, pdfjs } from 'react-pdf';
 
@@ -90,6 +104,20 @@ const App = ({ setSteps, steps }) => {
               <div>
                 {d.DATA.map((i, index)=>{
                   if(i.TYPE === "TEXT"){
+                    if(index > 0) {
+                      return (
+                        <div className='addheight' style={{marginTop: "35px"}}>
+                          <h3 style={{background: "white", zIndex: "9998", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "#94231b" }}>{i.SUBTITLE}</h3>
+
+                          <div className="TextLiMarginer" style={{margin: "20px"}}>
+                            {/* <div>{i.DATA}</div> */}
+                            {/* <FroalaEditorView model={i.DATA} /> */}
+                            <div dangerouslySetInnerHTML={{ __html: i.DATA }}/>
+                          </div>
+                        </div>
+  
+                      )
+                    }
                     return (
                       <div className='addheight'>
                         <h3 style={{background: "white", zIndex: "9998", position: "sticky", top: "27px", paddingLeft: "10px", borderBottom: "1px solid #bdbdbd", marginTop: "10px", color: "#94231b" }}>{i.SUBTITLE}</h3>
@@ -97,8 +125,9 @@ const App = ({ setSteps, steps }) => {
                         <div className='safahalImgContainer'>
                           <img className='safahalImg' src="/1.jpeg" alt="" />
                         </div>
-                        <div style={{margin: "20px"}}>
+                        <div className="TextLiMarginer" style={{margin: "20px"}}>
                           {/* <div>{i.DATA}</div> */}
+                          {/* <FroalaEditorView model={i.DATA} /> */}
                           <div dangerouslySetInnerHTML={{ __html: i.DATA }}/>
                         </div>
                         <div className='safahalImgContainer'>
