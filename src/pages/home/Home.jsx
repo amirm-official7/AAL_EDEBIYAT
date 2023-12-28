@@ -84,7 +84,7 @@ const App = ({ setSteps, steps }) => {
   return (
     <div className="app">
       <header className="header">
-        <div title="Abidinpaşa Anadolu Lisesi dilimizin zenginlikleri projesi" className="logo">DILIMIZIN ZENGINLIKLERI</div>
+        <div title="Abidinpaşa Anadolu Lisesi dilimizin zenginlikleri projesi" className="logo">DİLİMİZİN ZENGİNLİKLERİ</div>
       </header>
       <main className="content">
         {data.map((d, index) => {
